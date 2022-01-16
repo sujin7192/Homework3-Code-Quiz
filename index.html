@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Su's Code Quiz</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="home">
+            <div id="ready">
+                <h1>Ready for Code Quiz?</h1>
+            </div>
+            <!-- Start quiz button  -->
+            <div id="startbutton"><button>Start Quiz</button></div>
+            <div id="highscores"><button>View High Scores</button></div>
+
+        </div>
+
+        <!-- Rules -->
+        <div id="rulebox">
+            <div id="rules">
+                <p>QUIZ RULES</p>
+                <li>You will have 60 seconds to finish all quiz.</li>
+                <li>If answer is correct, answer will turn green.</li>
+                <li>if answer is incorrect, answer will turn red.</li>
+                <li>If answer is incorrect, time will subtract by 3 seconds.</li>
+            </div>
+            <!-- continue quit buttons -->
+            <div id="buttons">
+                <button id="restart">Continue</button>
+                <button id="quit">Quit</button>
+            </div>
+        </div>
+
+
+        <!-- Quiz Box -->
+        <div id="quizbox">
+            <div id="header">
+                <p>Good Luck!</p>
+                <div id="timer">
+                    <div id="countdown">60</div>
+                </div>
+            </div>
+
+            <div id="question">
+                <!-- It will be brought up from js -->
+            </div>
+            <div id="options">
+                <!-- It will be brought up from js -->
+            </div>
+            <div id="footer">
+                <div id="totalquiz">
+                    <!-- It will be brought up from js -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- result -->
+        <div id="resultbox">
+            <p>You've completed the quiz</p>
+            <div id="score">
+                <!-- Score result from js -->
+            </div>
+
+            <div id="buttons">
+                <button id="restart">Play Again</button>
+                <button id="quit">Quit</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- This file has questions and options only -->
+    <script src="./questions.js"></script>
+
+    <!-- This file is for all codes for quiz -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
