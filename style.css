@@ -15,15 +15,26 @@
     font-family: 'Prompt', sans-serif;
 }
 
-.home,
-.rulebox,
-.quizbox,
-.resultbox {
+#home,
+#rulebox,
+#quizbox,
+#resultbox {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     
 }
+
+
+.active {
+    opacity:1 ;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 /* .hide {
     visibility: hidden;
@@ -31,15 +42,20 @@
 
 
 
-#container {
-    width: 100vw;
-    height: 100vh;
+
+#home,
+#rulebox,
+#quizbox,
+#resultbox  {
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     flex-direction: column;
     text-align: center;
+    z-index: 1;
 }
 
 button {
@@ -54,20 +70,25 @@ button {
     font-size: 0.4rem;
    
 }
-#startbutton {
+
+
+#firststartbutton {
    padding-right: 5rem ;
    padding-left:5rem;
    font-size: 1.0rem;
    margin-top: 3rem;
 }
 h1{
-    padding-bottom: 80px;
+    font-size: 2rem;
+    padding-top: 100px;
 }
-/* #highscores {
-    margin-top: 50px;
-} */
 
-#highscore {
+
+
+
+
+
+#highscores {
     margin-top: 100px;
     font-size: 0.5rem;
 }
@@ -79,6 +100,13 @@ h1{
     outline-style: double;
     padding: 30px;
     align-items: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    
+    
+ 
    
    
 }
@@ -94,6 +122,7 @@ h1{
     outline-style: double;
     padding: 30px;
     align-items: center;
+    display: none;
 }
 
 #score {
@@ -107,6 +136,7 @@ h1{
     outline-style: double;
     padding: 30px;
     align-items: center;
+    display: none;
 }
 
 #timer{
@@ -118,4 +148,11 @@ h1{
     padding: 15px;
    
     
+}
+
+.active {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
